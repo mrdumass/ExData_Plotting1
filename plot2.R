@@ -9,7 +9,7 @@ power.table[,3]<-as.numeric(as.character(power.table[,3]))
 power.table$Date<-strptime(paste(power.table$Date,power.table$Time), "%d/%m/%Y %H:%M:%S")
 ## open png device ##
 png(file="plot2.png")
-## plot Histogram ##
+## plot line graph ##
 plot(power.table[,1],power.table[,3],type ="l",xlab ="", ylab= "Global Active Power (kilowatts)")
 ## close png device  ##
 dev.off()
